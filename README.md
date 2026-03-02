@@ -8,17 +8,45 @@ The analysis focuses on trader activity, leverage patterns, and performance vari
 
 ---
 
-## What Was Done
+## Problem Statement
 
-- Cleaned and prepared the Fear & Greed Index dataset
-- Cleaned and processed historical crypto trading data
-- Converted timestamps and aligned dates for accurate merging
-- Calculated notional trade value (Size × Execution Price)
-- Estimated a leverage proxy using percentile ranking
-- Aggregated daily trading metrics (volume, trade count, buy/sell ratio)
-- Merged trading metrics with sentiment data
-- Compared trader behavior during Fear vs Greed periods
-- Analyzed high-leverage vs low-leverage trader patterns
+Cryptocurrency markets are highly volatile and often driven by emotional cycles. This project investigates:
+
+- Does trader performance differ during Fear vs Greed market conditions?
+- Do traders change their trading behavior based on sentiment?
+- How does leverage usage vary across sentiment cycles?
+
+---
+
+## Dataset
+
+The analysis is based on two datasets:
+
+1. Fear & Greed Index Dataset  
+   - Daily market sentiment classification (Fear, Greed, Neutral)
+   - Timestamp-based sentiment values
+
+2. Historical Crypto Trading Dataset  
+   - Execution price  
+   - Trade size (tokens)  
+   - Buy/Sell side  
+   - Account-level transaction data  
+   - Timestamped trading records  
+
+**Note:** Due to GitHub’s 25MB file size limit, a reduced sample of the trading dataset is uploaded. The full dataset (~45MB) was used during analysis.
+
+---
+
+## Methodology
+
+- Data cleaning and preprocessing
+- Timestamp conversion and date alignment
+- Calculation of notional trade value (Size × Execution Price)
+- Leverage proxy estimation using percentile ranking
+- Daily aggregation of trading metrics (volume, trade count, buy/sell ratio)
+- Merging trading metrics with daily sentiment data
+- Sentiment-based performance comparison
+- High vs Low leverage trader segmentation
 
 ---
 
@@ -27,11 +55,11 @@ The analysis focuses on trader activity, leverage patterns, and performance vari
 - Trading behavior varies across different sentiment phases.
 - High-leverage traders show stronger performance shifts during extreme sentiment conditions.
 - Trading activity increases during emotionally driven market periods.
-- Sentiment-based analysis provides deeper insights into risk-taking behavior.
+- Sentiment-based analysis provides deeper insight into risk-taking patterns.
 
 ---
 
-## Tools Used
+## Tools & Technologies
 
 - Python
 - Pandas
@@ -44,4 +72,4 @@ The analysis focuses on trader activity, leverage patterns, and performance vari
 
 ## Conclusion
 
-This project demonstrates how combining sentiment indicators with transaction-level trading data can reveal behavioral finance patterns and performance differences in cryptocurrency markets.
+This project demonstrates how combining sentiment indicators with transaction-level trading data can uncover behavioral finance patterns and performance differences in cryptocurrency markets.
